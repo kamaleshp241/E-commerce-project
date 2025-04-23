@@ -23,9 +23,7 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
           />
           <button 
            onClick={handleSearch}
-          className="bg-cyan-500  text-white px-4 py-3 hover:bg-cyan-600 rounded-r-lg
-
-">
+          className="bg-cyan-500  text-white px-4 py-3 hover:bg-cyan-600 rounded-r-lg">
             🔍
           </button>
         </div>

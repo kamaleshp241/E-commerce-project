@@ -19,7 +19,7 @@ const sampleProducts = [
 
 const sampleCategories = ["All", "Boards", "Modules", "Sensors"];
 
-const Dashboard = ({ searchQuery }) => {
+const Dashboard = ({ searchQuery = "" }) => {
   const [category, setCategory] = useState("All");
 
   const filteredProducts = sampleProducts.filter(product => {
@@ -29,9 +29,8 @@ const Dashboard = ({ searchQuery }) => {
   });
 
   return (
-    <div className="p-4">
+    <div className="p-4 bg-gray-100 min-h-screen">
       <h1 className="text-2xl font-bold mb-4">Categories</h1>
-      {/* Category List */}
       <CategoryList
         categories={sampleCategories}
         onSelect={setCategory}
@@ -39,13 +38,13 @@ const Dashboard = ({ searchQuery }) => {
       />
 
       <h2 className="text-xl font-semibold mt-6 mb-2">Products</h2>
-      {/* Display filtered products */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-x-2 gap-y-4">
         {filteredProducts.map(product => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>
+    
   );
 };
 

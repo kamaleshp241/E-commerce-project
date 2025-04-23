@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="border rounded-xl shadow hover:shadow-lg transition w-[250px] h-[300px] flex flex-col items-left justify-between p-2">
+    <div className="border rounded-xl shadow hover:shadow-lg transition w-[250px] h-[300px] flex flex-col items-left justify-between p-2 bg-white">
       <img
         src={product.image}
         alt={product.name}
@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
       </div>
       
       <Link to={`/product/${product.id}`}>
-        <button className="bg-blue-600 text-white px-2 py-1 rounded text-xs w-full font-bold">
+        <button className="bg-blue-600 text-white px-2 py-2 rounded text-xs w-full font-bold hover:bg-green-700 transition duration-200">
           Buy
         </button>
       </Link>
